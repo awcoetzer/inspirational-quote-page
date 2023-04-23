@@ -2,7 +2,7 @@
 
 This is a exclusive solo project by [Scrimba's Frontend Career Path](https://scrimba.com/learn/frontend "Scrimba's frontend career path web page") for Bootcamp members
 
-#### [VIEW PROJECT HERE]()
+#### [VIEW LIVE VERSION]()
 
 ![Scrimba Logo](./resources/images/readme/scrimba-logo-1550x500.png "Scrimba Logo")
 
@@ -24,8 +24,9 @@ _Repository tree/blobs_
     * [css/](./resources/css/)
         * [styles.css](./resources/css/styles.css)
     * [images/](./resources/images/)
+        * [backgrounds/](./resources/images/backgrounds/)
+        * [emotes/](./resources/images/emotes/)
         * [readme/](./resources/images/readme/)
-            * [sguide-linkcrimba-logo-1550x500.png](./resources/images/readme/scrimba-logo-1550x500.png)
     * [javascript/](./resources/javascript/)
         * [app.js](./resources/javascript/app.js)
 * [.prettierrc](./.prettierrc)
@@ -37,27 +38,26 @@ _Repository tree/blobs_
 #### PROJECT GOALS & STRETCH GOALS
 _Project instructions & challenges_
 
-* Build it from Scratch
+* Build it from Scratch ✅
 * Make sure you use:
-    * Classes
-    * Background-image
-    * Google font: Inter
+    * Classes ✅
+    * Background-image ✅
+    * Google font: Inter ✅
 
 ##### STRETCH GOALS
 
-* Change the quote & background image
-* Use flexbox
-* Change the color of the quote box on :hover
-* Find a way to use :hover
-* Make the quote box link to the frontend career path course on Scrimba
+* Change the quote & background image ✅
+* Change the color of the quote box on :hover ✅
+* Find a way to use :hover ✅
+* Make the quote box link to the frontend career path course on Scrimba ✅
 
 ##### EVEN STRETCHIER STRETCH GOALS
 
-* Place the quote box in the center of the image
-* Use flexbox
-* Use javascript to:
-    * Display random quote on refresh
-    * Display random background image on refresh
+* Place the quote box in the center of the image ✅
+* Use flexbox ✅
+* Use javascript to: 
+    * Display random quote on refresh ✅
+    * Display random background image on refresh ✅
 <br>
 
 #### DESIGN NOTES
@@ -66,7 +66,9 @@ _Figma file, Colours, Fonts ..._
 * Figma file [here](https://www.figma.com/file/Lh3hI5Taz4Wdr631NnS5Y0/Inspirational-Quote-Page?node-id=0-1&t=GUOL2D1WYsf6sDmE-0)
 * Font used 
     * ```html
-        
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"           rel="stylesheet" />
         ```
 
     *   ```css
@@ -75,31 +77,28 @@ _Figma file, Colours, Fonts ..._
 * Color palette
     * ```css
         /***** Color Palette *****/
-        /***** For Fonts *****/
-        --clr-grey: ;
+        --clr-main-shade: hsl(44, 58%, 77%);
+        --clr-main: hsl(45, 100%, 85%);
+        --clr-main-tint: hsl(45, 100%, 90%);
 
-        /* Palette */
-        --clr-shade: ;
-        --clr-main: ;
-        --clr-tint: ;
+        --clr-grey: hsl(23, 35%, 26%);
 
-        /* Highlights & Accents */
-        --clr-highlight: ;
-        --clr-accent: ;
+        --clr-accent-shade: hsl(161, 43%, 42%);
+        --clr-accent: hsl(161, 43%, 62%);
+        --clr-accent-tint: hsl(161, 43%, 72%);
       ```        
-
-<br>
-
-#### PERFORMANCE RESULTS
-
-![Google Lighthouse Performance Results]( 'Google Lighthouse Performance Results')
 
 <br>
 
 #### SOURCES
 _Sources used within this project_
 
-* [Empty for now]()
+* For the backgrounds
+    * [https://www.pexels.com/](https://www.pexels.com/)
+* For the cute emotes, credit goes to **catalyststuff**
+    * [https://www.freepik.com/author/catalyststuff](https://www.freepik.com/author/catalyststuff)
+* For the quotes
+    * Random sites found on google
 
 <br>
 
@@ -107,7 +106,3 @@ _Sources used within this project_
 _Those who contributed to the project_
 
 * [Andre W. Coetzer](https://github.com/awcoetzer)
-
-<br>
-
-
