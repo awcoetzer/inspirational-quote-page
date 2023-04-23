@@ -2,7 +2,7 @@
 
 This is a exclusive solo project by [Scrimba's Frontend Career Path](https://scrimba.com/learn/frontend "Scrimba's frontend career path web page") for Bootcamp members
 
-#### [VIEW LIVE VERSION]()
+#### [VIEW LIVE VERSION](https://inspirational-quote-page-awcoetzer.netlify.app/)
 
 ![Scrimba Logo](./resources/images/readme/scrimba-logo-1550x500.png "Scrimba Logo")
 
