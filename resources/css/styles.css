@@ -1,0 +1,259 @@
+/* 
+  Style Variables
+*/
+
+:root {
+  /* percentage fonts */
+  --percentage-font-10: 62.5%;
+  --percentage-font-9: 56.25%;
+  --percentage-font-8: 50%;
+
+  /* font family */
+  --font-family-inter: 'Inter', sans-serif;
+
+  /* font size system */
+  --font-10: 1rem;
+  --font-12: 1.2rem;
+  --font-14: 1.4rem;
+  --font-16: 1.6rem;
+  --font-18: 1.8rem;
+  --font-20: 2rem;
+  --font-24: 2.4rem;
+  --font-30: 3rem;
+  --font-32: 3.2rem;
+  --font-36: 3.6rem;
+  --font-44: 4.4rem;
+  --font-52: 5.2rem;
+  --font-62: 6.2rem;
+  --font-74: 7.4rem;
+  --font-86: 8.6rem;
+  --font-98: 9.8rem;
+
+  /* font weight */
+  --font-weight-400: 400;
+  --font-weight-500: 500;
+  --font-weight-700: 700;
+
+  /* spacing system */
+  --spacing-2: 0.2rem;
+  --spacing-4: 0.4rem;
+  --spacing-8: 0.8rem;
+  --spacing-12: 1.2rem;
+  --spacing-16: 1.6rem;
+  --spacing-24: 2.4rem;
+  --spacing-32: 3.2rem;
+  --spacing-48: 4.8rem;
+  --spacing-64: 6.4rem;
+  --spacing-80: 8rem;
+  --spacing-96: 9.6rem;
+  --spacing-128: 12.8rem;
+
+  --border-rad-15: 1.5rem;
+
+  /* color palettes */
+  --clr-main-shade: hsl(44, 58%, 77%);
+  --clr-main: hsl(45, 100%, 85%);
+  --clr-main-tint: hsl(45, 100%, 90%);
+
+  --clr-grey: hsl(23, 35%, 26%);
+
+  --clr-accent-shade: hsl(161, 43%, 42%);
+  --clr-accent: hsl(161, 43%, 62%);
+  --clr-accent-tint: hsl(161, 43%, 72%);
+}
+
+::selection {
+  background-color: var(--clr-grey);
+  color: var(--clr-accent-tint);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 0 var(--spacing-48);
+}
+
+.center-text {
+  text-align: center;
+}
+
+html {
+  font-size: var(--percentage-font-10);
+}
+
+.body {
+  font-family: var(--font-family-inter);
+  font-size: var(--font-16);
+  font-weight: var(--font-weight-400);
+  color: var(--clr-grey);
+  background-color: var(--clr-main);
+}
+
+.main {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-padding {
+  padding: var(--spacing-96) 0;
+}
+
+.section-quote {
+  position: relative;
+  padding: 0 var(--spacing-48);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote-container {
+  position: relative;
+  border: 8px solid var(--clr-accent);
+  border-radius: var(--border-rad-15);
+  width: 72rem;
+  height: 48rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 1rem -0.3rem var(--clr-grey);
+  margin-bottom: var(--spacing-24);
+  overflow: hidden;
+}
+
+.quote-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(45, 100%, 85%, 0.2);
+  backdrop-filter: blur(4px);
+}
+
+.scrimba-link,
+.scrimba-link:link,
+.scrimba-link:visited {
+  border-radius: var(--border-rad-15);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: inherit;
+  text-decoration: none;
+  box-shadow: 0 0 1rem -0.4rem var(--clr-grey);
+}
+
+.scrimba-link:hover .quote-text-box, 
+.scrimba-link:active .quote-text-box{
+  background-color: var(--clr-main-tint);
+}
+
+.quote-text-box {
+  position: relative;
+  padding: 2rem 3rem;
+  border-radius: var(--border-rad-15);
+  width: 44rem;
+  height: 14rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-8);
+  background-color: var(--clr-main);
+}
+
+.quote-emote {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  width: 10rem;
+  height: 10rem;
+  transition: transform 0.15s ease-in;
+}
+
+.scrimba-link:hover .quote-emote{
+  transform: translate(50%, -50%);
+}
+
+.quote-emote::after {
+  content: 'Visit Scrimba';
+  position: inherit;
+  top: 0;
+  right: 0;
+  padding: 0.5rem 1rem;
+  border-radius: 10rem;
+  transform: translate(60%, -60%) scale(0);
+  font-size: var(--font-14);
+  color: var(--clr-grey);
+  background-color: var(--clr-main-tint);
+  transition: opacity 0.15s ease-in;
+}
+
+.scrimba-link:hover .quote-emote::after {
+  animation: bubble 0.25s linear forwards;
+}
+
+@keyframes bubble {
+  0% {
+    transform: translate(60%, -60%) scale(0);
+  }
+  60% {
+    transform: translate(60%, -60%) scale(110%);
+  }
+  90% {
+    transform: translate(60%, -60%) scale(90%);
+  }
+  100% {
+    transform: translate(60%, -60%) scale(100%);
+  }
+}
+
+.quote-text {
+  font-size: var(--font-20);
+  font-weight: var(--font-weight-400);
+  line-height: 2.4rem;
+  letter-spacing: -0.5px;
+}
+
+.quote-author {
+  align-self: flex-end;
+  font-size: var(--font-18);
+  font-weight: var(--font-weight-700);
+  line-height: 2.4rem;
+  letter-spacing: -0.5px;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  padding: var(--spacing-12) var(--spacing-24);
+  border: 1px solid var(--clr-grey);
+  border-radius: 10rem;
+  width: 80%;
+  font-size: var(--font-16);
+  background: var(--clr-accent);
+  box-shadow: 0 0.4rem 0.4rem -0.4rem var(--clr-grey);
+  transition: background-color 0.1s ease-in, transform 0.1s ease-in, box-shadow 0.1s ease-in;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--clr-accent-tint);
+  box-shadow: 0 0.6rem 0.6rem -0.5rem var(--clr-grey);
+}
+
+.btn:active {
+  transform: translateY(0.3rem);
+  box-shadow: 0 0.4rem 0.4rem -0.4rem var(--clr-grey);
+}
