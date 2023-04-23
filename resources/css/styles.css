@@ -7,6 +7,7 @@
   --percentage-font-10: 62.5%;
   --percentage-font-9: 56.25%;
   --percentage-font-8: 50%;
+  --percentage-font-7: 43.75%;
 
   /* font family */
   --font-family-inter: 'Inter', sans-serif;
@@ -86,6 +87,9 @@ html {
 }
 
 .body {
+  margin: 0 auto;
+  max-width: 72rem;
+  height: 100vh;
   font-family: var(--font-family-inter);
   font-size: var(--font-16);
   font-weight: var(--font-weight-400);
@@ -93,21 +97,16 @@ html {
   background-color: var(--clr-main);
 }
 
-.main {
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .section-padding {
   padding: var(--spacing-96) 0;
 }
 
+.main {
+  margin: 0 1rem;
+}
+
 .section-quote {
   position: relative;
-  padding: 0 var(--spacing-48);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -118,7 +117,7 @@ html {
   position: relative;
   border: 8px solid var(--clr-accent);
   border-radius: var(--border-rad-15);
-  width: 72rem;
+  width: 100%;
   height: 48rem;
   display: flex;
   justify-content: center;
@@ -146,6 +145,7 @@ html {
   position: absolute;
   top: 50%;
   left: 50%;
+  max-width: 44rem;
   transform: translate(-50%, -50%);
   color: inherit;
   text-decoration: none;
@@ -161,7 +161,7 @@ html {
   position: relative;
   padding: 2rem 3rem;
   border-radius: var(--border-rad-15);
-  width: 44rem;
+  /* width: 100%; */
   height: 14rem;
   display: flex;
   flex-direction: column;
@@ -257,3 +257,55 @@ html {
   transform: translateY(0.3rem);
   box-shadow: 0 0.4rem 0.4rem -0.4rem var(--clr-grey);
 }
+
+.project-owner {
+  font-size: var(--font-14);
+  line-height: 1.5;
+  letter-spacing: -0.5px;
+
+}
+
+.project-owner--link,
+.project-owner--link:link, 
+.project-owner--link:visited {
+  padding: 0.3rem 0;
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--clr-grey);
+}
+
+.project-owner--link:hover, 
+.project-owner--link:active {
+  border-bottom: 1px solid var(--clr-grey);
+}
+
+@media only screen and (max-width: 35em) {
+  html {
+    font-size: var(--percentage-font-8);
+  }
+
+  .scrimba-link {
+    width: 70%;
+  }
+
+  .quote-text-box {
+    padding: 1rem 1.5rem;
+    height: fit-content;
+  }
+
+  .quote-emote {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+@media only screen and (max-width: 21.25em) {
+  html {
+    font-size: var(--percentage-font-7);
+  }
+
+  .quote-text-box {
+    padding: 1rem 1.5rem;
+    height: fit-content;
+  }
+} 
